@@ -21,7 +21,7 @@ label{display:block;font-size:12px;color:var(--mut);margin-bottom:4px}
 input,select{width:100%;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
 button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 14px}
 button.pri{background:var(--ac);color:var(--acx);border-color:var(--ac);font-weight:600}
-.sc{overflow-x:auto}
+.sc{overflow-x:auto;border:1px solid var(--bd);border-radius:10px}
 table{width:100%;border-collapse:collapse;min-width:560px}
 th,td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--bd);white-space:nowrap}
 th:first-child,td:first-child{text-align:left}
@@ -50,28 +50,38 @@ tfoot td{font-weight:700;background:var(--hd);border-bottom:0}
 .mtable th .ch{color:var(--mut);margin-left:4px;font-weight:400;font-size:11px}
 .mtable td{padding:14px;text-align:left;font-size:14px;border-bottom:1px solid var(--bd);white-space:nowrap}
 .mtable tfoot td{border-bottom:none;padding-top:16px}
-.mtotal-n{font-size:14px;font-weight:700;display:block}
-.mtotal-s{font-size:12px;color:var(--mut);display:block;margin-top:2px;font-weight:400}
-.mtotal-a{font-weight:700;font-size:14px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mtotal-n{font-size:16px;font-weight:700;display:block}
+.mtotal-s{font-size:13px;color:var(--mut);display:block;margin-top:2px;font-weight:400}
+.mtotal-a{font-weight:700;font-size:15px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mdaterow{display:flex;justify-content:flex-end;padding:0 2px 10px}
-.mdate2{font-size:13px;color:var(--tx);display:inline-flex;align-items:center;gap:6px}
-.mtable2{width:100%;border-collapse:collapse;min-width:640px;table-layout:fixed}
-.mtable2 th{background:var(--hd);text-align:left;padding:10px 14px;font-size:13px;font-weight:700;border-bottom:1px solid var(--bd);white-space:nowrap;color:var(--tx);text-transform:none;letter-spacing:normal}
+.mdate2{font-size:15px;color:var(--tx);display:inline-flex;align-items:center;gap:6px}
+.mtable2{width:100%;border-collapse:collapse;min-width:640px;table-layout:fixed;border-radius:10px;overflow:hidden}
+.mtable2 th{background:var(--hd);text-align:left;padding:12px 14px;font-size:15px;font-weight:700;border-bottom:1px solid var(--bd);white-space:nowrap;color:var(--tx);text-transform:none;letter-spacing:normal}
 .mtable2 th .ic{color:var(--mut);margin-right:6px;font-weight:400}
-.mtable2 td{padding:10px 14px;font-size:13px;text-align:left;border-bottom:1px solid var(--bd);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mtable2 td{padding:12px 14px;font-size:15px;text-align:left;border-bottom:1px solid var(--bd);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mtable2 tfoot tr{background:var(--card)}
-.mtable2 tfoot td{border-bottom:none;padding-top:10px;padding-bottom:10px}
+.mtable2 tfoot td{border-bottom:none;padding-top:10px;padding-bottom:10px;background:var(--card)}
 .mtable2 th{position:relative}
+.mtable2 th .hlabel{transition:color .12s}
+.mtable2 th:hover .hlabel{color:#1877F2}
+.mbtn2 svg{width:16px;height:16px;display:block}
+.mtable2 thead th:first-child{border-top-left-radius:9px}
+.mtable2 thead th:last-child{border-top-right-radius:9px}
+.mtable2 tfoot tr:last-child td:first-child{border-bottom-left-radius:9px}
+.mtable2 tfoot tr:last-child td:last-child{border-bottom-right-radius:9px}
 .rsz{position:absolute;top:0;right:-4px;width:8px;height:100%;cursor:col-resize;z-index:2;touch-action:none}
 .rsz:hover,.rsz:active{background:var(--ac);opacity:.35}
 .mdaterow{display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:0 2px 10px}
 .mbtn2{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;padding:0}
+.mbtn2 svg{stroke:var(--tx);transition:stroke .12s}
 .mbtn2:hover{background:var(--hd)}
+.mbtn2:hover svg{stroke:#1877F2}
+.rtitle{font-size:20px;font-weight:700;color:var(--tx);margin:0 0 14px;letter-spacing:-.01em}
 </style>
 </head>
 <body>
 <div class="wrap"><div id="root"></div></div>
-<script id="data" type="application/json">{"title":"Ad Performance Report","dateFrom":"2026-09-10","dateTo":"2026-09-03","currency":"USD","rows":[{"name":"","reach":"23432","impr":"32423","spent":"2334"},{"name":"","reach":"12434","impr":"25436","spent":"1234"},{"name":"","reach":"43543","impr":"3454","spent":"3453","attribution":"Multiple attribution settings"},{"name":"","reach":"434534","impr":"345787","spent":"4354","attribution":"Multiple attribution settings"}]}</script>
+<script id="data" type="application/json">{"title":"Ads Reporting - View","dateFrom":"2026-09-16","dateTo":"2026-09-29","currency":"USD","rows":[{"name":"","reach":"23431","impr":"32423","spent":"2334"},{"name":"","reach":"123423","impr":"235432","spent":"5325","attribution":"Multiple attribution settings"}]}</script>
 <script>
 (function(){
 var ARTURL='https://claude.ai/artifact/WZfhBhU8K56wQi5e5CmpA7',STANDALONE=false,VIEWERONLY=true,dlcap=null,colWidths=[null,null,null,null,null];
@@ -103,13 +113,13 @@ function reportHTML(){
   body+='<tr><td>'+fmtN(a)+'</td><td>'+fmtN(b)+'</td><td>'+fmtF(freq(b,a))+'</td><td>'+fmtM(c)+'</td><td>'+esc(at)+'</td></tr>'});
  var attrTotal=Object.keys(attrSet).length<=1?attrFirst:'Multiple attribution settings';
  var cw=function(i,def){return 'width:'+(colWidths[i]||def)+'px'};
- return '<div class="card"><div class="mdaterow"><button class="mbtn2" id="dlbtn" title="Tải xuống CSV">⬇</button><span class="mdate2">🗓 '+esc(period2())+'</span></div>'+
- '<div class="sc"><table class="mtable2"><colgroup><col style="'+cw(0,140)+'"><col style="'+cw(1,140)+'"><col style="'+cw(2,110)+'"><col style="'+cw(3,140)+'"><col style="'+(colWidths[4]?('width:'+colWidths[4]+'px'):'')+'"></colgroup><thead><tr>'+
- '<th><span class="ic">⋮</span>Reach<span class="rsz" data-i="0"></span></th>'+
- '<th><span class="ic">⋮</span>Impressions<span class="rsz" data-i="1"></span></th>'+
- '<th><span class="ic">⋮</span>Frequency<span class="rsz" data-i="2"></span></th>'+
- '<th><span class="ic">⋮</span>Amount spent<span class="rsz" data-i="3"></span></th>'+
- '<th><span class="ic">⋮</span>Attribution setting<span class="rsz" data-i="4"></span></th>'+
+ return '<div class="card"><h2 class="rtitle">'+esc(S.title||'Untitled report')+'</h2><div class="mdaterow"><button class="mbtn2" id="dlbtn" title="Download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></button><span class="mdate2">🗓 '+esc(period2())+'</span></div>'+
+ '<div class="sc"><table class="mtable2"><colgroup><col style="'+cw(0,155)+'"><col style="'+cw(1,155)+'"><col style="'+cw(2,130)+'"><col style="'+cw(3,165)+'"><col style="'+(colWidths[4]?('width:'+colWidths[4]+'px'):'')+'"></colgroup><thead><tr>'+
+ '<th><span class="ic">⋮</span><span class="hlabel">Reach</span><span class="rsz" data-i="0"></span></th>'+
+ '<th><span class="ic">⋮</span><span class="hlabel">Impressions</span><span class="rsz" data-i="1"></span></th>'+
+ '<th><span class="ic">⋮</span><span class="hlabel">Frequency</span><span class="rsz" data-i="2"></span></th>'+
+ '<th><span class="ic">⋮</span><span class="hlabel">Amount spent</span><span class="rsz" data-i="3"></span></th>'+
+ '<th><span class="ic">⋮</span><span class="hlabel">Attribution setting</span><span class="rsz" data-i="4"></span></th>'+
  '</tr></thead><tbody>'+body+'</tbody>'+
  '<tfoot><tr>'+
  '<td><span class="mtotal-n">'+fmtN(tr)+'</span><span class="mtotal-s">Meta Accounts</span></td>'+
@@ -156,7 +166,7 @@ function rowsEditor(){
 }
 function drawEditor(){
  var el=document.getElementById('ed');
- el.innerHTML='<h2>✏️ Nhập liệu báo cáo (bản v6)</h2>'+
+ el.innerHTML='<h2>✏️ Nhập liệu báo cáo (bản v9)</h2>'+
  '<div class="grid"><div><label>Tiêu đề báo cáo</label><input id="f-title" value="'+esc(S.title)+'"></div>'+
  '<div><label>Từ ngày</label><input id="f-from" type="date" value="'+esc(S.dateFrom)+'"></div>'+
  '<div><label>Đến ngày</label><input id="f-to" type="date" value="'+esc(S.dateTo)+'"></div>'+
